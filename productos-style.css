@@ -1,0 +1,23 @@
+/* https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=D7CCC8&secondary.color=5D4037 */ 
+
+:root {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "header header" 
+                         "main main" 
+                         "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
