@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Rescue</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&family=Sansita:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <img class="logo" src="./logo.png" alt="Logo">
+            <!-- <img class="logo" src="./logo.png" alt="Logo"> -->
         </header>
-        <nav>
-            <ul class="nav-site">
+        <nav class="nav-bar">
+            <ul class="inner-container nav-bar--menu">
                 <li><a href="">Extravios</a></li>
                 <li><a href="">Adopciones</a></li>
                 <li><a href="">Servicios</a></li>
@@ -21,35 +24,46 @@
             </ul>
         </nav>
         <main>
-            <section class="lost">
-               <!-- usar una imagen de mapa con un degradado arriba --> 
-                <article class="lost-panel">
-                    <h3 class="lost-title">TITULO PERDIDO</h3>
-                    <div class="lost-media">FOTOS</div>
-                    <div class="lost-map">MAPA</div>
-                    <div class="lost-description">DESCRIPCION</div>
-                </article>
-                <article class="lost-panel">
-                    <h3 class="lost-title">TITULO PERDIDO</h3>
-                    <div class="lost-media">FOTOS</div>
-                    <div class="lost-map">MAPA</div>
-                    <div class="lost-description">DESCRIPCION</div>
-                </article>
-                <article class="lost-panel">
-                    <h3 class="lost-title">TITULO PERDIDO</h3>
-                    <div class="lost-media">FOTOS</div>
-                    <div class="lost-map">MAPA</div>
-                    <div class="lost-description">DESCRIPCION</div>
-                </article>
+            <section class="lost-section">
+                <div class="inner-container lost-pets">
+                    <article class="pet-card">
+                        <a href=""></a>
+                            <div class="pet-card--media" >
+                                <img class="pet-card--media" src="./static/cat.jpg" alt="Gato1">
+                            </div>
+                            <div class="pet-card--body">
+                                <h4 class="pet-card--title">Fifi</h4>
+                                <p>
+                                   En: <span></span>
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="pet-card">
+                        <div class="pet-card--media"></div>
+                        <div class="pet-card--body"></div>
+                    </article>
+                    <article class="pet-card">
+                        <div class="pet-card--media"></div>
+                        <div class="pet-card--body"></div>
+                    </article>
+                    <article class="pet-card">
+                        <div class="pet-card--media"></div>
+                        <div class="pet-card--body"></div>
+                    </article>
+                    <article class="pet-card">
+                        <div class="pet-card--media"></div>
+                        <div class="pet-card--body"></div>
+                    </article>
+                </div>
             </section>
-            <section class="service"></section>
-            <section class="adoption"></section>
-            <section class="sale"></section>
-            <section class="news"></section>
-            <section class="donate"></section>
+            <section class="service-section"></section>
+            <section class="adoption-section"></section>
+            <section class="sale-section"></section>
+            <section class="news-section"></section>
+            <section class="donate-section"></section>
         </main>
         <footer>
-
         </footer>
     </div>
 </body>

@@ -1,8 +1,20 @@
 /* https://preview.themeforest.net/item/pets-pet-care-shop-and-veterinary-html-template/full_screen_preview/23334988?_ga=2.157449016.385113034.1631728275-1909854472.1576614455 
-https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=FF6F00*/ 
+https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=cc3366&secondary.color=795548&primary.text.color=ffffff*/ 
 
 :root {
     box-sizing: border-box;
+    --primary-color : #cc3366;
+    --primary-dark-color : #96003c;
+    --primary-light-color : #ff6993;
+    --secondary-color : #795548;
+    --secondary-dark-color : #4b2c20;
+    --secondary-light-color : #a98274;
+    --text-primary-color : #ffffff;
+    --text-secondary-color : #ffffff;
+    --text-color: #22262a;
+    --gray-dark: #414149;
+    --gray: #878f97;
+    --gray-light: #f0f2f4;
 }
 
 *, ::before, ::after {
@@ -11,85 +23,97 @@ https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=F
 
 body {
     margin: 0;
+    font-family: Roboto, sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
+h1, h2, h3, h4 {
+    font-family: Sansita, serif;
+    letter-spacing: 0.03em;
 }
 
 
-img.logo {
-    width: 8em;
-    height: 8em;
+.inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.nav-site {
+header {
+    padding: 2em;
+    background-color: var(--primary-color);
+}
+
+.nav-bar {
+    background-color: var(--primary-dark-color);
+}
+
+.nav-bar--menu {
     list-style-type: none;
-    background-color: #F7941D;
     display: flex;
-    justify-content: space-around;
-    padding: 0.5em;
-    margin: 0;
+    justify-content: flex-start;
+    padding: 0;
 }
 
-
-.nav-site > li > a {
+.nav-bar--menu > li > a {
     display:  block;
     color: white;
     text-decoration: none;
     padding: 0.5em 1em;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
+.nav-bar--menu > li > a:hover {
+    background-color: var(--primary-light-color);;
 }
 
-.lost{
+
+.lost-section {
+    background: linear-gradient(rgba(252, 252, 252, 0.5), rgba(252, 252, 252, 0.5)), url(./static/mapa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lost-pets {
     display: flex;
     justify-content: space-around;
-    background-color: #ff6f69;
+    padding: 3.5em 0;
 }
 
-.lost-panel {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 2fr 2fr;
-    grid-template-areas:    "title title"
-                            "media map"
-                            "media description";
+.pet-card {
+    flex: 1;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0.1em 0.1em 0.5em #124
 }
 
-.lost-title {
-    grid-area: title;
+.pet-card + .pet-card {
+    margin-left: 1.5em;
 }
 
-.lost-media {
-    grid-area: media;
+.pet-card--media {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    width: 100%;
 }
 
-.lost-map {
-    grid-area: map;
+.pet-card--body {
+    padding: 1em 1em;
 }
 
-.lost-description {
-    grid-area: description;
+.pet-card--title {
+    margin: 0 auto;
+    text-align:center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
 }
 
-.service {
-    background-color: #d9ad7c;
-    padding: 3em;
+.pet-card--body > p {
+    margin: 0;
 }
-
-.adoption {
-    background-color: #d6d4e0;
-    padding: 3em;
-}
-
 
 footer {
-    background-color: #3C2800;
+    background-color: var(--gray);
     padding: 3em;
 }
 
