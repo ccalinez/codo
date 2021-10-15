@@ -35,7 +35,7 @@ h1, h2, h3, h4 {
 
 
 .inner-container {
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -82,13 +82,9 @@ header {
 
 .lost-container {
     display: flex;
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 4rem 0;
     justify-content: center;
+    padding: 3em 1em;
 }
-
-
 
 .lost-container .pet-card {
     flex : 1;
@@ -137,6 +133,51 @@ header {
     margin: 0 auto;
 }
 
+.services{
+    background-color:  var(--gray-light);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    padding: 3em 1em;
+}
+
+.tile {
+    padding: 2em;
+    background-color: white;
+}
+
+.tile:hover {
+    background-color: var(--secondary-color);
+}
+
+.tile__icon {
+    color: var(--secondary-color);
+}
+
+.tile:hover  .tile__icon {
+    color: white;
+}
+
+.tile__title {
+    color: black;
+}
+
+.tile:hover  .tile__title {
+    color: var(--gray-light);
+}
+
+.adoptions{
+    background-color:  var(--white);
+}
+
+.adoptions-container {
+    display: flex;
+    justify-content: center;
+    padding: 3em 1em;
+}
 
 footer {
     background-color: var(--gray);
