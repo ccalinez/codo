@@ -307,21 +307,75 @@ header h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1em;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
     padding: 3em 1em;
 }
 
 .adopt-card {
     grid-column: span 1;
     grid-row: span 1;
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .adopt-card__img {
+    width: 80%;
     border-radius: 50%;
-    border : 1em solid var(--primary-color)
+    border : 0.8em solid var(--secondary-light-color);
+}
+
+.adopt-card:hover .adopt-card__img {
+    transform: scale(1.1);
+    border: none;
 }
 
 
+.adopt-card__title {
+    text-align: center;
+    margin: 0.5em auto 0;
+    text-transform: uppercase;
+    color: var(--primary-dark-color);
+}
+
+.adopt-button {
+    margin-top: 0.5em;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    padding: 0.2em 0.5em;
+    border: 0;
+    color: white;
+    border-radius: 2em;
+    background-image: linear-gradient(to bottom, var(--primary-light-color), var(--primary-color));
+    box-shadow: 0.1em 0.1em 0.5em var(--primary-dark-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-nunber {
+    margin: 0 0.5em;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--primary-dark-color);
+    color: white;
+    box-shadow: 0.1em 0.1em 0.5em var(--gray-dark);
+}
 
 footer {
     background-color: var(--gray);
