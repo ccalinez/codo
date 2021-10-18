@@ -5,122 +5,215 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Rescue</title>
+    <title>Choco</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&family=Sansita:wght@800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400&family=Sansita:ital,wght@0,800;0,900;1,800&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
     <script src="https://kit.fontawesome.com/89f3dff73f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <!-- <img class="logo" src="./logo.png" alt="Logo"> -->
-    </header>
-    <nav class="nav-bar">
-        <div class="inner-container">
+        <h1>CHOCO</h1>
+        <nav class="nav-bar">
             <ul class="nav-bar__menu">
-                <li><a href=""><i class="fas fa-search-location"></i> <span class="nav-bar__label"> Extravios</span> </a></li>
-                <li><a href=""><i class="fas fa-baby-carriage"></i> <span class="nav-bar__label"> Adopciones</span></a></li>
-                <li><a href=""><i class="fas fa-user-circle"></i><span class="nav-bar__label"> Servicios</span> </a></li>
+                <li><a href=""><i class="fas fa-search-location"></i> <span class="nav-bar__label"> Extravios</span>
+                    </a></li>
+                <li><a href=""><i class="fas fa-baby-carriage"></i> <span class="nav-bar__label"> Adopciones</span></a>
+                </li>
+                <li><a href=""><i class="fas fa-user-circle"></i><span class="nav-bar__label"> Servicios</span> </a>
+                </li>
                 <li><a href=""><i class="fas fa-box-open"></i> <span class="nav-bar__label"> Productos</span></a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+        <button class="donate-button">donación</button>
+    </header>
     <main>
-        <section class="lost">
-            <div class="lost-container inner-container">
-                <article class="pet-card">
-                    <a  href="/">
-                        <i class="far fa-heart fa-2x share-button"></i>
-                    </a>
-                    <img class="pet-card__img" src="./static/cat.jpg" alt="Gato1">
-                    <div class="pet-card__body">
-                        <h4 class="pet-card__title">Fifi</h4>
-                        <p class="pet-card__text">
-                            En: <span></span>
-                        </p>
+        <div class="hero">
+            <div class="hero__container">
+                <h1>Te ayudamos a encotrar a tu mascota</h1>
+                <p>Registra una Alerta o busca en nuestro listado de mascotas perdidas.</p>
+                <button class="main-button" type="button" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">registrar alerta</button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article class="pet-card">
-                    <a  href="/">
-                        <i class="far fa-heart fa-2x share-button"></i>
-                    </a>
-                    <img class="pet-card__img" src="./static/dog1.jpg" alt="Gato1">
-                    <div class="pet-card__body">
-                        <h4 class="pet-card__title">Fifi</h4>
-                        <p class="pet-card__text">
-                            En: <span></span>
-                        </p>
-                    </div>
-                </article>
-                <article class="pet-card">
-                    <a  href="/">
-                        <i class="far fa-heart fa-2x share-button"></i>
-                    </a>
-                    <img class="pet-card__img" src="./static/dog4.jpg" alt="Gato1">
-                    <div class="pet-card__body">
-                        <h4 class="pet-card__title">Fifi</h4>
-                        <p class="pet-card__text">
-                            En: <span></span>
-                        </p>
-                    </div>
-                </article>
-                <article class="pet-card">
-                    <div class="pet-card__body">
-                        <h4 class="pet-card__title">Fifi</h4>
-                        <p class="pet-card__text">
-                            En: <span></span>
-                        </p>
-                    </div>
-                </article>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="inner-container">
+                <h3 class="section-title">Buscamos a:</h3>
+                <div class="lost-container ">
+                    <article class="pet-card">
+                        <button class="favorite-button">
+                            <i class="far fa-heart fa-2x"></i>
+                        </button>
+                        <img class="pet-card__img" src="./static/cat.jpg" alt="Gato1">
+                        <div class="pet-card__body">
+                            <button class="sight-button"><i class="fas fa-binoculars"></i></button>
+                            <h3 class="pet-card__title">fifi</h3>
+                        </div>
+                    </article>
+                    <article class="pet-card">
+                        <button class="favorite-button">
+                            <i class="far fa-heart fa-2x"></i>
+                        </button>
+                        <img class="pet-card__img" src="./static/dog1.jpg" alt="Gato1">
+                        <div class="pet-card__body">
+                            <button class="sight-button"><i class="fas fa-binoculars"></i></button>
+                            <h3 class="pet-card__title">sharon</h3>
+                        </div>
+                    </article>
+                    <article class="pet-card">
+                        <button class="favorite-button">
+                            <i class="far fa-heart fa-2x"></i>
+                        </button>
+                        <img class="pet-card__img" src="./static/dog4.jpg" alt="Gato1">
+                        <div class="pet-card__body">
+                            <button class="sight-button"><i class="fas fa-binoculars"></i></button>
+                            <h3 class="pet-card__title">sasha</h3>
+                        </div>
+                    </article>
+                    <article class="pet-card primary">
+                        <div class="ver-mas">
+                            <i class="fas fa-paw"></i>
+                            <p>Buscamos a otras 35 macotas perdidas</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="services">
-            <div class="inner-container services-container ">
-                <article class="tile">
-                    <i class="fas fa-briefcase-medical tile__icon fa-w-18 fa-fw fa-2x"></i>
-                    <h5 class="tile__title" >Veterinaria</h5>
-                </article>
-                <article class="tile">
-                    <i class="fas fa-bone tile__icon fa-w-18 fa-fw fa-2x"></i>
-                    <h5 class="tile__title">Alimento</h5>
-                </article>
-                <article class="tile">
-                    <i class="fas fa-cut tile__icon fa-w-18 fa-fw fa-2x"></i>
-                    <h5 class="tile__title" >Peluqueria</h5>
-                </article>
-                <article class="tile">
-                    <svg class="tile__icon svg-inline--fa fa-w-18 fa-fw fa-2x" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M67.64,3.37,288,168.08V192H239.54L38.17,41.25a16,16,0,0,1-2.8-22.45L45.19,6.18A16,16,0,0,1,67.64,3.37ZM128,224H288V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.1C58.83,268.85,32,233.66,32,192a32,32,0,0,1,64,0A32,32,0,0,0,128,224ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.23-21.39,27.32-11.31L374.6,64h53.62c10.92,0,23.74,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112ZM320,231.84l128,45.71V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H320ZM432,112a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z"></path></svg>
-                    <h5 class="tile__title">Paseador</h5>
-                </article>
-                <article class="tile">
-                    <svg class="tile__icon svg-inline--fa fa-w-18 fa-fw fa-2x" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M232 256c0 13.2-10.8 24-24 24s-24-10.8-24-24 10.8-24 24-24 24 10.8 24 24zm252-49.7l150 120c6.7 5.4 8 15.2 2.8 22.1l-78.2 104.3c-4.8 6.5-13.7 8.3-20.7 4.3l-150.4-86C312.1 484.4 150.8 492.8 61 403c-65.5-65.5-78.1-163.8-38-242-14.4-11.8-23-29.7-23-49 0-35.3 28.7-64 64-64 19.2 0 36.9 8.9 49 23.5 65.3-33.6 144.4-30.8 207 9.3l86.6 63.6c5.3 4.2 7.3 11.3 5.1 17.7l-10.2 29.5c-1.1 3.2-.1 6.7 2.6 8.9l25.2 20.2c2.6 2.1 6.2 2.3 9.1.6l27.4-16.2c5.8-3.4 13-2.9 18.2 1.2zM85.5 88.3C79.7 83 72 80 64 80c-17.7 0-32 14.3-32 32 0 8.1 3.3 15.4 8.4 21.2 15.2-20.6 27.3-31.9 45.1-44.9zM280 256c0-39.7-32.3-72-72-72s-72 32.3-72 72 32.3 72 72 72 72-32.3 72-72z" class=""></path></svg>
-                    <h5 class="tile__title">Adiestramiento</h5>
-                </article>
-                <article class="tile">
-                    <i class="fas fa-concierge-bell tile__icon fa-w-18 fa-fw fa-2x"></i>
-                    <h5 class="tile__title">Alojamiento</h5>
-                </article><article class="tile">
-                    <i class="fas fa-taxi tile__icon fa-w-18 fa-fw fa-2x"></i>
-                    <h5 class="tile__title">Traslado</h5>
-                </article>
-            </article><article class="tile">
-                <i class="fas fa-venus-mars tile__icon fa-w-18 fa-fw fa-2x"></i>
-                <h5 class="tile__title">Servicio</h5>
-            </article>
+            <div class="inner-container">
+                <h3 class="section-title">Todo lo que necesitas:</h3>
+                <div class="services-container ">
+                    <article class="tile">
+                        <i class="fas fa-briefcase-medical tile__icon fa-w-18 fa-fw fa-2x"></i>
+                        <h5 class="tile__title">Veterinaria</h5>
+                    </article>
+                    <article class="tile">
+                        <i class="fas fa-bone tile__icon fa-w-18 fa-fw fa-2x"></i>
+                        <h5 class="tile__title">Alimento</h5>
+                    </article>
+                    <article class="tile">
+                        <i class="fas fa-cut tile__icon fa-w-18 fa-fw fa-2x"></i>
+                        <h5 class="tile__title">Peluqueria</h5>
+                    </article>
+                    <article class="tile">
+                        <svg class="tile__icon svg-inline--fa fa-w-18 fa-fw fa-2x" aria-hidden="true" focusable="false"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M67.64,3.37,288,168.08V192H239.54L38.17,41.25a16,16,0,0,1-2.8-22.45L45.19,6.18A16,16,0,0,1,67.64,3.37ZM128,224H288V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.1C58.83,268.85,32,233.66,32,192a32,32,0,0,1,64,0A32,32,0,0,0,128,224ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.23-21.39,27.32-11.31L374.6,64h53.62c10.92,0,23.74,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112ZM320,231.84l128,45.71V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H320ZM432,112a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z">
+                            </path>
+                        </svg>
+                        <h5 class="tile__title">Paseador</h5>
+                    </article>
+                    <article class="tile">
+                        <svg class="tile__icon svg-inline--fa fa-w-18 fa-fw fa-2x" aria-hidden="true" focusable="false"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path fill="currentColor"
+                                d="M232 256c0 13.2-10.8 24-24 24s-24-10.8-24-24 10.8-24 24-24 24 10.8 24 24zm252-49.7l150 120c6.7 5.4 8 15.2 2.8 22.1l-78.2 104.3c-4.8 6.5-13.7 8.3-20.7 4.3l-150.4-86C312.1 484.4 150.8 492.8 61 403c-65.5-65.5-78.1-163.8-38-242-14.4-11.8-23-29.7-23-49 0-35.3 28.7-64 64-64 19.2 0 36.9 8.9 49 23.5 65.3-33.6 144.4-30.8 207 9.3l86.6 63.6c5.3 4.2 7.3 11.3 5.1 17.7l-10.2 29.5c-1.1 3.2-.1 6.7 2.6 8.9l25.2 20.2c2.6 2.1 6.2 2.3 9.1.6l27.4-16.2c5.8-3.4 13-2.9 18.2 1.2zM85.5 88.3C79.7 83 72 80 64 80c-17.7 0-32 14.3-32 32 0 8.1 3.3 15.4 8.4 21.2 15.2-20.6 27.3-31.9 45.1-44.9zM280 256c0-39.7-32.3-72-72-72s-72 32.3-72 72 32.3 72 72 72 72-32.3 72-72z"
+                                class=""></path>
+                        </svg>
+                        <h5 class="tile__title">Adiestramiento</h5>
+                    </article>
+                    <article class="tile">
+                        <i class="fas fa-concierge-bell tile__icon fa-w-18 fa-fw fa-2x"></i>
+                        <h5 class="tile__title">Alojamiento</h5>
+                    </article>
+                    <article class="tile">
+                        <i class="fas fa-taxi tile__icon fa-w-18 fa-fw fa-2x"></i>
+                        <h5 class="tile__title">Traslado</h5>
+                    </article>
+                    </article>
+                    <article class="tile">
+                        <i class="fas fa-venus-mars tile__icon fa-w-18 fa-fw fa-2x"></i>
+                        <h5 class="tile__title">Servicio</h5>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="adoptions">
-            <div class="adoptions-container inner-container">
-                
+            <div class="inner-container">
+                <h3 class="section-title">Buscamos dueños para:</h3>
+                <div class="adoptions-container ">
+                    <article class="adopt-card">
+                        <img class="adopt-card__img" src="./static/maxi-a6.jpg">
+                        <h3 class="adopt-card__title">Maxi</h3>
+                        <button class="adopt-button"><i class="fas fa-baby-carriage"> Adoptar</i></button>
+                    </article>
+                    <article class="adopt-card">
+                        <img class="adopt-card__img" src="./static/maxi-a6.jpg">
+                        <h3 class="adopt-card__title">Maxi</h3>
+                        <button class="adopt-button"><i class="fas fa-baby-carriage"> Adoptar</i></button>
+                    </article>
+                    <article class="adopt-card">
+                        <img class="adopt-card__img" src="./static/maxi-a6.jpg">
+                        <h3 class="adopt-card__title">Maxi</h3>
+                        <button class="adopt-button"><i class="fas fa-baby-carriage"> Adoptar</i></button>
+                    </article>
+                    <article class="adopt-card">
+                        <img class="adopt-card__img" src="./static/maxi-a6.jpg">
+                        <h3 class="adopt-card__title">Maxi</h3>
+                        <button class="adopt-button"><i class="fas fa-baby-carriage"> Adoptar</i></button>
+                    </article>
+                    <article class="adopt-card">
+                        <img class="adopt-card__img" src="./static/maxi-a6.jpg">
+                        <h3 class="adopt-card__title">Maxi</h3>
+                        <button class="adopt-button"><i class="fas fa-baby-carriage"> Adoptar</i></button>
+                    </article>
+                    <article class="adopt-card">
+                        <img class="adopt-card__img" src="./static/maxi-a6.jpg">
+                        <h3 class="adopt-card__title">Maxi</h3>
+                        <button class="adopt-button"><i class="fas fa-baby-carriage"> Adoptar</i></button>
+                    </article>
+                    <article class="adopt-card">
+                        <img class="adopt-card__img" src="./static/maxi-a6.jpg">
+                        <h3 class="adopt-card__title">Maxi</h3>
+                        <button class="adopt-button"><i class="fas fa-baby-carriage"> Adoptar</i></button>
+                    </article>
+                    <article class="adopt-card">
+                        <img class="adopt-card__img" src="./static/maxi-a6.jpg">
+                        <h3 class="adopt-card__title">Maxi</h3>
+                        <button class="adopt-button"><i class="fas fa-baby-carriage"> Adoptar</i></button>
+                    </article>
+                    
+                </div>
+                <div class="pagination">
+                    <button class="pagination-nunber">1</button>
+                    <button class="pagination-nunber">2</button>
+                    <button class="pagination-nunber">3</button>
+                </div>
             </div>
         </section>
     </main>
     <footer>
     </footer>
 </body>
-
 </html>

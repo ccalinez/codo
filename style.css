@@ -1,6 +1,7 @@
 /* https://preview.themeforest.net/item/pets-pet-care-shop-and-veterinary-html-template/full_screen_preview/23334988?_ga=2.157449016.385113034.1631728275-1909854472.1576614455 
 https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=cc3366&secondary.color=795548&primary.text.color=ffffff*/ 
 
+
 :root {
     box-sizing: border-box;
     --primary-color : #cc3366;
@@ -23,67 +24,156 @@ https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=c
 
 body {
     margin: 0;
-    font-family: Roboto, sans-serif;
+    font-family: Nunito, sans-serif;
     line-height: 1.4;
     letter-spacing: 0.02em;
 }
 
 h1, h2, h3, h4 {
-    font-family: Sansita, serif;
+    font-family: Sansita, sans-serif;
     letter-spacing: 0.03em;
+    margin: 0;
 }
 
+.primary {
+    background-color: var(--primary-color) !important;
+    padding: 0;
+}
 
 .inner-container {
     max-width: 1080px;
     margin: 0 auto;
 }
 
-header {
-    padding: 2em;
-    background-color: var(--primary-color);
+section .inner-container {
+    padding: 2em 0 2em;
 }
 
-.nav-bar {
-    background-color: var(--primary-dark-color);
+
+header {
+    background-color: var(--primary-color);
+    padding: 0.5em 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+.donate-button {
+    border: 2px  solid white;
+    background-color: var(--primary-color);
+    border-radius: 0.5em;
+    padding: 0.15em 0.5em ;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    color: white;
+    animation: twinkle 1.5s linear 3;
 }
 
 .nav-bar__menu {
     list-style-type: none;
     display: flex;
-    justify-content: flex-start;
     justify-content: center;
     margin: 0;
-    padding: 0;
 }
 
 .nav-bar__menu > li > a {
     display:  block;
     color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
     text-decoration: none;
     padding: 0.5em 1em;
 }
 
-.nav-bar__menu > li > a:hover {
-    background-color: var(--primary-light-color);;
-}
-
-.nav-bar__label {
-    font-weight: 600;
+.nav-bar__menu > li:hover > a {
+    color: var(--gray);
 }
 
 
-.lost {
-    background: linear-gradient(rgba(252, 252, 252, 0.5), rgba(252, 252, 252, 0.5)), url(./static/mapa.png);
-    background-repeat: no-repeat;
+.hero{
+    color: white;
+    background-image: url(./static/hero.jpg);
     background-position: center;
     background-size: cover;
+    width: 100%;
+}
+
+.hero__container {
+    width: 40%;
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 0.1em 0.1em 0.2em var(--gray-dark);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    text-shadow: 0.1em 0.1em 0.2em var(--gray-dark);
+}
+
+.main-button {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    padding: 0.2em 0.5em;
+    border: 0;
+    color: white;
+    border-radius: 2em;
+    background-image: linear-gradient(to bottom, var(--primary-light-color), var(--primary-color));
+    box-shadow: 0.1em 0.1em 0.5em var(--primary-dark-color);
+    margin: 2em;
+}
+
+.favorite-button {
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 50%;
+    padding: 0.7em;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    color: var(--primary-dark-color);
+    opacity: 60%;
+}
+
+.favorite-button:hover {
+    opacity: 100%;
+}
+
+
+
+.sight-button i{
+    color: white;
 }
 
 .lost-container {
     display: flex;
     justify-content: center;
-    padding: 3em 1em;
+}
+
+.section-title{
+    font-size: 2em;
+    color: var(--primary-dark-color);
+    text-align: center;
 }
 
 .lost-container .pet-card {
@@ -97,16 +187,6 @@ header {
     position: relative;
 }
 
-.share-button {
-    position: absolute;
-    right: 0.3em;
-    top: 0.3em;
-    color: var(--primary-dark-color);
-}
-
-.fa-heart {
-    filter:drop-shadow(3px 3px 3px var(--primary-color));
-}
 
 .pet-card + .pet-card {
     margin-left: 1.5em;
@@ -120,18 +200,62 @@ header {
 }
 
 .pet-card__body {
-    padding: 1em 1.5em;
+    padding: 1.5em 1.5em;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
+    position: relative;
 }
+
+.sight-button {
+    position: absolute;
+    left: calc(50% - 1.5em);
+    top: -1em;
+    width: 3em;
+    height: 2em;
+    font-size: 2rem;
+    border: solid 0.2rem white;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.sight-button:hover {
+    background-color: var(--secondary-dark-color);
+}
+
 
 .pet-card__title {
-    margin: 0 auto;
+    text-align: center;
+    margin: 0.5em auto 0;
+    text-transform: uppercase;
+    color: var(--primary-dark-color);
 }
 
-.pet-card__text {
-    margin: 0 auto;
+.ver-mas {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3em 2em;
+    height: 100%;
+    cursor: pointer;
 }
+
+ .pet-card:hover .ver-mas {
+    background-color: var(--primary-dark-color) ;
+    border-radius: 1em;
+}
+
+.ver-mas i {
+    font-size: 8rem;
+}
+
+.ver-mas p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 
 .services{
     background-color:  var(--gray-light);
@@ -140,13 +264,18 @@ header {
 .services-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr ;
-    padding: 3em 1em;
+    grid-template-rows: 2fr 2fr;
+    box-shadow: 0.1em 0.1em 0.3em var(--gray);
 }
 
 .tile {
-    padding: 2em;
+    padding: 3em 2em;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
 .tile:hover {
@@ -163,6 +292,7 @@ header {
 
 .tile__title {
     color: black;
+    margin: 0 auto;
 }
 
 .tile:hover  .tile__title {
@@ -174,15 +304,42 @@ header {
 }
 
 .adoptions-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
     padding: 3em 1em;
 }
+
+.adopt-card {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.adopt-card__img {
+    border-radius: 50%;
+    border : 1em solid var(--primary-color)
+}
+
+
 
 footer {
     background-color: var(--gray);
     padding: 3em;
 }
 
+
+@keyframes twinkle {
+    0%,  50%, 100% {
+        border-color: white;
+        background-color: var(--primary-color);
+        color: white;
+    }
+    25%, 75% {
+        border-color: var(--primary-color);
+        background-color: white;
+        color: var(--primary-color);
+    }  
+}
 
 
