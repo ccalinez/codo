@@ -35,6 +35,10 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
+label {
+    color: var(--text-color);
+}
+
 .primary {
     background-color: var(--primary-color) !important;
     padding: 0;
