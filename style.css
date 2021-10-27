@@ -402,6 +402,10 @@ footer ul {
     padding: 0;
 }
 
+footer button {
+    align-self: center;
+}
+
 
 @keyframes twinkle {
     0%,  50%, 100% {
