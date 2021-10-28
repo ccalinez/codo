@@ -404,6 +404,12 @@ footer {
     text-align: center;
     background-color: var(--gray-dark);
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.redes__button:hover {
+    color: var(--gray-dark);
+    background-color: white;
 }
 
 footer > div {
@@ -438,7 +444,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--gray-light);
+    color: var(--gray-dark);
 }
 
 @keyframes twinkle {
